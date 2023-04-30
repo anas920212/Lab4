@@ -1,0 +1,53 @@
+using System;
+
+namespace Lab4Variance
+{
+    // Edible hierarchy
+    public abstract class Edible { }
+
+    public class ChewingGum : Edible { }
+
+    public abstract class Food : Edible { }
+
+    public class Soup : Food { }
+
+    public abstract class Sandwich : Food { }
+
+    public class GrilledCheese : Sandwich { }
+
+    public class BahnMi : Sandwich { }
+
+    public abstract class Sweet : Food { }
+
+    public class IceCream : Sweet { }
+
+    public class Waffles : Sweet { }
+
+    public class Chocolate : Sweet { }
+
+    public class CandyBar : Sweet { }
+
+    // Payment hierarchy
+    public abstract class Payment { }
+
+    public abstract class Cash : Payment { }
+
+    public class EUR : Cash { }
+
+    public class USD : Cash { }
+
+    public class SEK : Cash { }
+
+    public abstract class Electronic : Payment { }
+
+    public class Card : Electronic { }
+
+    public class Swish : Electronic { }
+
+    public class Bitcoin : Electronic { }
+
+    // StreetCartBase
+    public abstract class StreetCartBase
+    {
+        public abstract Food SellFood(Cash cash);
+    }
